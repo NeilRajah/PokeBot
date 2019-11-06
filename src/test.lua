@@ -30,7 +30,7 @@ function main()
     --     print("been 30 frames")
     --     counter = 0
     -- end
-    gui.text(20,140, string.format(memory.readwordunsigned(0x2886)))
+    gui.text(20,140, string.format(memory.readwordunsigned(0x287E)))
 end
 
 gui.register(main) --register for graphics, input uses frameadvance51
