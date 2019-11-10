@@ -14,6 +14,7 @@ function main()
 
     --detect button press
     j = joypad.get(1)
+    s = stylus.get(0)
     if j.B then
         gui.text(2,20, "B Button Pressed")
     end
@@ -61,6 +62,20 @@ function move(val, n, run)
     end
 end
 
+function stylusTouch(x,y, frames)
+    -- setAllFalse()
+    s.x = x
+    s.y = y 
+    s.touch = true
+
+    for i = 0, frames, 1 do
+        print("touch", x, y)
+        -- joypad.set(1, j)
+        stylus.set(s)
+        emu.frameadvance()
+    end
+end
+
 function setAllFalse()
     for key, value in pairs(j) do
         j[key] = false
@@ -82,7 +97,8 @@ delay(40)
 --     move('l', steps, true)
 --     delay(50)
 -- end
-move('r', 1, false)
+-- move('r', 1, false)
+stylusTouch(128, 96, 10)
 delay(40)
 
 --if facing in same direction, 5 frames
