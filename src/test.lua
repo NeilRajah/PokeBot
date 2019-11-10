@@ -6,6 +6,7 @@
 j = {} --input table
 -- emu.loadrom("D:\\Desktop\\Games\\Emulators\\DS\\Platinum\\3541 - Pokemon Platinum Version (US)(XenoPhobia)")
 counter = 0
+battling = false
 
 function main()
     --red text box
@@ -23,6 +24,19 @@ function main()
     if j.select then 
         pressButton('d', 3)
         pressButton('r', 5)
+    end
+    
+    --print if in battle
+    gui.text(0, 40, memory.readwordunsigned(0x022417F4))
+    if memory.readwordunsigned(0x022417F4) == 46584 then
+
+        gui.box(0,20, 45,20, "green")
+        gui.text(2,20, "battling")
+        battling = true
+    else 
+        gui.box(0, 40, 45, 10, "green")
+        gui.text(2,20, "searching")
+        battling = true
     end
 
     --touch screen every 30 frames
@@ -62,6 +76,20 @@ function move(val, n, run)
     end
 end
 
+function mash(button, on, off) 
+    setAllFalse()
+
+    if val == 'd' then --set everything else to false, only one can be true
+        j.down = true
+    elseif val == 'r' then
+        j.right = true
+    elseif val == 'l' then
+        j.left = true
+    elseif val == 'u' then 
+        j.up = true
+    end
+end
+
 function stylusTouch(x,y, frames)
     -- setAllFalse()
     s.x = x
@@ -98,7 +126,39 @@ delay(40)
 --     delay(50)
 -- end
 -- move('r', 1, false)
-stylusTouch(128, 96, 10)
+-- stylusTouch(128, 96, 10)
+
+while true do 
+    setAllFalse()
+    if memory.readwordunsigned(0x022417F4) == 46584 then
+        j.A = true
+        for i = 0, 10, 1 do
+            joypad.set(1, j)
+            emu.frameadvance()
+        end
+
+        for i = 0, 20, 1 do
+            emu.frameadvance()
+        end
+    elseif j.L == false then 
+        j.B = true
+        j.left = true
+        frames = 40
+        for i = 0, frames, 1 do
+            joypad.set(1, j)
+            emu.frameadvance()
+        end
+
+        j.left = false
+        j.right = true
+        for i = 0, frames, 1 do
+            joypad.set(1, j)
+            emu.frameadvance()
+        end
+    end
+    
+    emu.frameadvance()
+end
 delay(40)
 
 --if facing in same direction, 5 frames
