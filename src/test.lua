@@ -3,163 +3,63 @@
 --Created on: 11/04/2019
 --Basic test for scripting in Desmume
 
-j = {} --input table
+local controls = require "controls"
+
 -- emu.loadrom("D:\\Desktop\\Games\\Emulators\\DS\\Platinum\\3541 - Pokemon Platinum Version (US)(XenoPhobia)")
 counter = 0
 battling = false
 
 function main()
     --red text box
-    gui.box(0,6, 45,20, "red")
-    gui.text(2,10, "PokeBot")
-
-    --detect button press
-    j = joypad.get(1)
-    s = stylus.get(0)
-    if j.B then
-        gui.text(2,20, "B Button Pressed")
-    end
-
-    --press button sequence from select button
-    if j.select then 
-        pressButton('d', 3)
-        pressButton('r', 5)
-    end
+    gui.text(2,10, "POKEBOT")
     
     --print if in battle
     gui.text(0, 40, memory.readwordunsigned(0x022417F4))
     if memory.readwordunsigned(0x022417F4) == 46584 then
 
-        gui.box(0,20, 45,20, "green")
         gui.text(2,20, "battling")
         battling = true
     else 
-        gui.box(0, 40, 45, 10, "green")
         gui.text(2,20, "searching")
         battling = true
     end
 
-    --touch screen every 30 frames
-    -- counter = counter + 1
-    -- if counter == 30 then
-    --     print("been 30 frames")
-    --     counter = 0
-    -- end
     --0x021C5CCE - xpos
     --0x021C5CEE - ypos
     gui.text(20,140, string.format(memory.readwordunsigned(0x021C5CCE) .. " " .. string.format(memory.readwordunsigned(0x021C5CEE))))
 end
 
+--[[
+    Repeatedly move left and right 
+    steps - number of tiles to move
+]]--
+function scramble(steps) 
+    controls.move('l', steps, true)
+    controls.move('r', steps, true)
+end
+
 gui.register(main) --register for graphics, input uses frameadvance51
 
--- move for a number of tiles
-function move(val, n, run) 
-    setAllFalse()
-    print("move ", val, n, run)
-    if val == 'd' then --set everything else to false, only one can be true
-        j.down = true
-    elseif val == 'r' then
-        j.right = true
-    elseif val == 'l' then
-        j.left = true
-    elseif val == 'u' then 
-        j.up = true
-    end
+--PLAYER MOVEMENT--
 
-    if run then
-        j.B = true
-    end
 
-    for i = 1, 7 * n, 1 do --hold input for n frames
-        joypad.set(1, j)
-        emu.frameadvance()
-    end
-end
 
-function mash(button, on, off) 
-    setAllFalse()
+steps = 3
+controls.delay(40)
 
-    if val == 'd' then --set everything else to false, only one can be true
-        j.down = true
-    elseif val == 'r' then
-        j.right = true
-    elseif val == 'l' then
-        j.left = true
-    elseif val == 'u' then 
-        j.up = true
-    end
-end
-
-function stylusTouch(x,y, frames)
-    -- setAllFalse()
-    s.x = x
-    s.y = y 
-    s.touch = true
-
-    for i = 0, frames, 1 do
-        print("touch", x, y)
-        -- joypad.set(1, j)
-        stylus.set(s)
-        emu.frameadvance()
-    end
-end
-
-function setAllFalse()
-    for key, value in pairs(j) do
-        j[key] = false
-    end
-end    
-
-function delay(num)
-    print("delaying ", num)
-    for i = 0, num, 1 do
-        emu.frameadvance()
-    end
-end
-
-steps = 2
-delay(40)
--- for i = 1, 10, 1 do
---     move('r', steps, true)
---     delay(50)
---     move('l', steps, true)
---     delay(50)
--- end
--- move('r', 1, false)
--- stylusTouch(128, 96, 10)
 
 while true do 
-    setAllFalse()
-    if memory.readwordunsigned(0x022417F4) == 46584 then
-        j.A = true
-        for i = 0, 10, 1 do
-            joypad.set(1, j)
-            emu.frameadvance()
-        end
+    controls.setAllFalse()
+    if memory.readwordunsigned(0x022417F4) == 46584 then --if battling
+        controls.mash('a', 5, 2, j) --mash A
 
-        for i = 0, 20, 1 do
-            emu.frameadvance()
-        end
-    elseif j.L == false then 
-        j.B = true
-        j.left = true
-        frames = 40
-        for i = 0, frames, 1 do
-            joypad.set(1, j)
-            emu.frameadvance()
-        end
-
-        j.left = false
-        j.right = true
-        for i = 0, frames, 1 do
-            joypad.set(1, j)
-            emu.frameadvance()
-        end
+    else --looking for battle
+        scramble(steps) --run around
     end
     
     emu.frameadvance()
 end
-delay(40)
+controls.delay(40)
 
 --if facing in same direction, 5 frames
 --if facing perpendicular, 8 frames
