@@ -4,7 +4,8 @@
 --A module holding all functions regarding setting controller input
 
 local controls = {} --module
-local j = {} --input table
+local j = {} --button input table
+local s = stylus.get(0)
 
 --[[
     Press down a button
@@ -48,17 +49,19 @@ end --setButton
 ]]--
 function controls.stylusTouch(x,y, frames)
     --set values to the stylus
-    stylus = stylus.get(0)
     s.x = x
     s.y = y 
     s.touch = true
 
+    print("stylusTouch", x,y,frames)
     --loop holding down the stylus
     for i = 0, frames, 1 do
         stylus.set(s)
         emu.frameadvance()
     end
 end --stylusTouch
+
+--potentially add drag, polyline move stylus?
 
 --[[
     Move the player a number of tiles
@@ -83,15 +86,17 @@ end --move
     on - frames to hold the button for
     off - frames to release for
 ]]
-function controls.mash(button, on, off) 
-    for i = 0, on+off, 1 do
-        if i < on then --hold button for the on frames
-            setButton(button)    
-        end --if
-        
-        joypad.set(1, j)
-        emu.frameadvance() --move one frame ahead
-    end --loop
+function controls.mash(button, on, off)
+        for i = 0, on+off, 1 do 
+            if i < on then --hold button for the on frames
+                setButton(button)    
+            end --if
+            
+            joypad.set(1, j)
+            emu.frameadvance() --move one frame ahead
+        end --loop
+
+        emu.frameadvance()
 end --mash
 
 --[[
