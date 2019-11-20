@@ -9,6 +9,8 @@ local controls = require "controls"
 counter = 0
 battling = false
 
+local x,y = 44,82
+
 --GUI functions
 function main()
     --red text box
@@ -16,8 +18,8 @@ function main()
     
     --print if in battle
     gui.text(0, 40, memory.readwordunsigned(0x022417F4))
-    if memory.readwordunsigned(0x022417F4) == 46584 then
 
+    if memory.readwordunsigned(0x022417F4) == 46584 then
         gui.text(2,20, "battling")
         battling = true
     else 
@@ -28,6 +30,13 @@ function main()
     --0x021C5CCE - xpos
     --0x021C5CEE - ypos
     gui.text(20,140, string.format(memory.readwordunsigned(0x021C5CCE) .. " " .. string.format(memory.readwordunsigned(0x021C5CEE))))
+
+    r,g,b = gui.getpixel(x, y)
+    gui.text(180, 15, r .." ".. g .." ".. b)
+    -- gui.pixel(x-1,y, 'red')
+
+    gui.drawbox(200,0, 210,10, {r,g,b, 0xFF})
+    -- print((select(1,gui.getpixel(x,y))))
 end
 
 gui.register(main) --register for graphics, input uses frameadvance51
@@ -37,11 +46,9 @@ gui.register(main) --register for graphics, input uses frameadvance51
 steps = 3
 controls.delay(40)
 
-
 while true do 
     controls.setAllFalse()
     if memory.readwordunsigned(0x022417F4) == 46584 then --if battling
-        -- controls.mash('a', 5, 2, j) --mash A
         player.battleSequence()
 
     else --looking for battle
@@ -50,6 +57,7 @@ while true do
     
     emu.frameadvance()
 end
+
 controls.delay(40)
 
 --if facing in same direction, 5 frames
