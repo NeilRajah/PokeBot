@@ -6,10 +6,11 @@
 local player = require "player"
 local controls = require "controls"
 
-counter = 0
-battling = false
+local counter = 0
+local battling = false
+local bot = true
 
-local x,y = 44,82
+local x,y = 33,68
 
 --GUI functions
 function main()
@@ -37,6 +38,12 @@ function main()
 
     gui.drawbox(200,0, 210,10, {r,g,b, 0xFF})
     -- print((select(1,gui.getpixel(x,y))))
+
+    if (player.checkHealth()) then
+        gui.text(5,180, "Need to Heal")
+    else 
+        gui.text(5,180, "Fine to Battle")
+    end
 end
 
 gui.register(main) --register for graphics, input uses frameadvance51
@@ -46,7 +53,7 @@ gui.register(main) --register for graphics, input uses frameadvance51
 steps = 3
 controls.delay(40)
 
-while true do 
+while bot do 
     controls.setAllFalse()
     if memory.readwordunsigned(0x022417F4) == 46584 then --if battling
         player.battleSequence()

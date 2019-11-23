@@ -33,9 +33,9 @@ end --scramble
 function player.battleSequence()
     if ((select(3, gui.getpixel(mid[1], mid[2]))) == 57) then --is the fight button
         --wait, press the fight button, wait
-        controls.delay(30)
+        controls.delay(60)
         controls.stylusTouch(mid[1], mid[2], 10)
-        controls.delay(10)
+        controls.delay(60)
 
         --decide which move based on pp
         if ((select(1, gui.getpixel(topLeft[1], topLeft[2]))) ~= empty) then --top left slot
@@ -70,5 +70,24 @@ end --battleSequence
 --no PP: 148 0 33
 --low PP: 140 107 16 
 --regular PP: 57 66 57
+
+--Poketch health color: 82,132,82
+--Poketch no health color: 115,181,115
+function player.checkHealth()
+    local needToHeal = false
+    local health = 0
+
+    for x = 33, 95, 1 do
+        local r,g,b = gui.getpixel(x, 68)
+        if r == 82 and g == 132 and b == 82 then
+        health = health + 1
+        end
+    end
+
+    if health < 16 then
+        needToHeal = true
+    end
+    return needToHeal
+end
 
 return player
