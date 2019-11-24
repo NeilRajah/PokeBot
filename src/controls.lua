@@ -81,6 +81,35 @@ function controls.move(val, n, run)
 end --move
 
 --[[
+    Press the button for a number of frames
+    val - button to hold down
+    n - number of frames to press the button for
+]]
+function controls.pressButton(val, n)
+    setButton(val)
+
+    --hold input for n frames
+    for i = 1, n, 1 do
+        joypad.set(1, j)
+        emu.frameadvance()
+    end --loop
+end --pressButton
+
+--[[
+    Tap the button
+    val - button to press
+]]
+function controls.tapButton(val)
+    setButton(val)
+
+    --hold input for 10 frames
+    for i = 1, 10, 1 do
+        joypad.set(1,j)
+        emu.frameadvance()
+    end --loop
+end --tapButton
+
+--[[
     Mash a button 
     button - button to mash
     on - frames to hold the button for

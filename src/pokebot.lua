@@ -20,12 +20,12 @@ function main()
     --print if in battle
     gui.text(0, 40, memory.readwordunsigned(0x022417F4))
 
-    if memory.readwordunsigned(0x022417F4) == 46584 then
+    if battling then
         gui.text(2,20, "battling")
         battling = true
     else 
         gui.text(2,20, "searching")
-        battling = true
+        battling = false
     end
 
     --0x021C5CCE - xpos
@@ -39,11 +39,18 @@ function main()
     gui.drawbox(200,0, 210,10, {r,g,b, 0xFF})
     -- print((select(1,gui.getpixel(x,y))))
 
-    if (player.checkHealth()) then
-        gui.text(5,180, "Need to Heal")
-    else 
-        gui.text(5,180, "Fine to Battle")
-    end
+    --health indicator
+    if battling == false then
+        local health = player.checkHealth()
+        -- print(health)
+        if (health == 1) then
+            gui.text(5,180, "Need to Heal")
+        elseif (health == -1) then
+            gui.text(5, 180, "Need to Revive")
+        else
+            gui.text(5,180, "Fine to Battle")
+        end
+    end    
 end
 
 gui.register(main) --register for graphics, input uses frameadvance51
@@ -53,13 +60,39 @@ gui.register(main) --register for graphics, input uses frameadvance51
 steps = 3
 controls.delay(40)
 
+local frames = 0
+
 while bot do 
     controls.setAllFalse()
+
     if memory.readwordunsigned(0x022417F4) == 46584 then --if battling
-        player.battleSequence()
+        battling = true
+        -- print("battling switched to:", battling)
+    else
+        battling = false
+        frames = frames + 1
+    end
+
+    if battling then
+        frames = 0
+        player.battleSequence() 
 
     else --looking for battle
-        player.scramble(steps) --run around
+        -- controls.delay(100)
+        if player.checkHealth() == 0 then
+            player.scramble(steps) --run around
+        elseif player.checkHealth() == 1 then 
+            -- player.healFromBag()
+            if frames > 120 then
+                player.flyToCenter()
+                player.returnToTrainingSpot()
+            end
+        elseif player.checkHealth() == -1 then
+            if frames > 120 then
+                player.flyToCenter()
+                player.returnToTrainingSpot()
+            end
+        end
     end
     
     emu.frameadvance()

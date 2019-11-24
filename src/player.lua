@@ -33,9 +33,9 @@ end --scramble
 function player.battleSequence()
     if ((select(3, gui.getpixel(mid[1], mid[2]))) == 57) then --is the fight button
         --wait, press the fight button, wait
-        controls.delay(60)
+        controls.delay(30)
         controls.stylusTouch(mid[1], mid[2], 10)
-        controls.delay(60)
+        controls.delay(30)
 
         --decide which move based on pp
         if ((select(1, gui.getpixel(topLeft[1], topLeft[2]))) ~= empty) then --top left slot
@@ -74,20 +74,91 @@ end --battleSequence
 --Poketch health color: 82,132,82
 --Poketch no health color: 115,181,115
 function player.checkHealth()
-    local needToHeal = false
+    local needToHeal = 0
     local health = 0
 
     for x = 33, 95, 1 do
         local r,g,b = gui.getpixel(x, 68)
         if r == 82 and g == 132 and b == 82 then
-        health = health + 1
+            health = health + 1
         end
     end
 
-    if health < 16 then
-        needToHeal = true
+    if health < 5 and health > 0 then
+        needToHeal = 1
+    elseif health == 0 then
+        needToHeal = -1
     end
     return needToHeal
+end --checkHealth
+
+--[[
+    Sequence of actions to fly to the Pokemon center
+]]
+function player.flyToCenter() 
+    print("flying to center")
+    controls.tapButton('x') --open menu
+    controls.tapButton('d') --move down one menu
+    controls.tapButton('a') --select Pokemon tab   
+    controls.delay(85)
+
+    controls.tapButton('a') --select Pokemon with Fly
+    controls.delay(30)
+    controls.tapButton('d') --down one
+    controls.tapButton('a') --press Fly button
+    controls.delay(90)
+
+    controls.pressButton('l', 300) --index to left wall
+    controls.pressButton('d', 300) --index to bottom wall
+    controls.delay(30) 
+
+    controls.pressButton('u', 30) --move to Canalave City
+    controls.tapButton('a') --fly to city
+
+    controls.delay(570) --long pause for fly
+
+    controls.tapButton('x')
+    controls.tapButton('u')
+    controls.tapButton('x')
+
+    print("entering center")
+    player.healAtCenter()
+    print("outside center")
+
+    controls.delay(300) 
+
+end --flyToCenter
+
+function player.healAtCenter()
+    controls.pressButton('u', 300)
+    for i = 1, 55, 1 do
+        controls.mash('a', 5, 10)
+    end
+    controls.pressButton('d', 280)
 end
 
+function player.returnToTrainingSpot()
+    controls.tapButton('y')
+    controls.tapButton('b')
+    controls.pressButton('r', 30)
+    
+    controls.tapButton('b')
+    controls.pressButton('d', 130)
+    controls.pressButton('r', 300)
+    controls.pressButton('d', 60)
+end
+
+--[[
+    Sequence of actions to heal from bag
+]]
+function player.healFromBag()
+    controls.tapButton('x') --open menu
+    controls.tapButton('d') 
+    controls.tapButton('d') --move down to bag
+    controls.tapButton('a') --select Bag Tab
+
+    controls.delay(60) --pause
+    controls.pressButton('u', 60) --move to top position of menu
+    controls.pressButton('u', 60) --move to top position of menu
+end
 return player
