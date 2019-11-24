@@ -83,14 +83,16 @@ while bot do
             player.scramble(steps) --run around
         elseif player.checkHealth() == 1 then 
             -- player.healFromBag()
-            if frames > 120 then
+            if frames > 150 then
                 player.flyToCenter()
                 player.returnToTrainingSpot()
+                frames = 0
             end
         elseif player.checkHealth() == -1 then
-            if frames > 120 then
+            if frames > 150 then
                 player.flyToCenter()
                 player.returnToTrainingSpot()
+                frames = 0
             end
         end
     end

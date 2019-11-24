@@ -84,7 +84,7 @@ function player.checkHealth()
         end
     end
 
-    if health < 5 and health > 0 then
+    if health < 10 and health > 0 then
         needToHeal = 1
     elseif health == 0 then
         needToHeal = -1
@@ -143,9 +143,10 @@ function player.returnToTrainingSpot()
     controls.pressButton('r', 30)
     
     controls.tapButton('b')
-    controls.pressButton('d', 130)
-    controls.pressButton('r', 300)
+    controls.pressButton('d', 140)
+    controls.pressButton('r', 360)
     controls.pressButton('d', 60)
+    controls.tapButton('b')
 end
 
 --[[
