@@ -141,10 +141,11 @@ function player.returnToTrainingSpot()
     controls.tapButton('y')
     controls.pressButton('r', 30)
     
-    controls.tapButton('b')
-    controls.pressButton('d', 140)
+    -- controls.tapButton('b')
+    controls.pressButton('d', 130)
     controls.pressButton('r', 360)
     controls.pressButton('d', 60)
+    controls.tapButton('y')
 end
 
 --[[

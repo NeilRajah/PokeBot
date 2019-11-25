@@ -81,6 +81,7 @@ while bot do
         -- controls.delay(100)
         if player.checkHealth() == 0 then
             player.scramble(steps) --run around
+            -- player.returnToTrainingSpot()
         elseif player.checkHealth() == 1 then 
             -- player.healFromBag()
             if frames > 150 then
