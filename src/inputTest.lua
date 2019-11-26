@@ -29,7 +29,6 @@ while true do
     str = ""
     for key, value in pairs(joypad.get(1)) do
         if value == true then 
-            print(key)
             str = str .. key .. " "
             allFalse = false
         end
@@ -37,6 +36,7 @@ while true do
     if (allFalse) then
         str = "---"
     end
+    print(str)
     file:write(str .. "\n")
 
     emu.frameadvance()

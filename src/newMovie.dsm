@@ -19,6 +19,11 @@
 ---
 ---
 ---
+---
+---
+---
+---
+---
 B 
 B 
 B 
@@ -26,149 +31,15 @@ B
 B 
 B 
 B 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B right up 
-B right up 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right 
-B right down 
-B right down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B left down 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
 B left 
 B left 
 B left 
@@ -177,126 +48,253 @@ B left
 B left 
 B left 
 B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left 
-A B left down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B down 
-A B right down 
-A B right down 
-A B right down 
-A B right down 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right 
-A B right up 
-A B right up 
-A B right up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
-A B up 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B 
+B 
+B 
+B 
+B 
+B 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B 
+B 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B 
+B 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
