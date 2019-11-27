@@ -1,11 +1,13 @@
 require "controls"
 
-file = io.open("newMovie.dsm", "r")
+file = io.open("return.sqnc", "r")
 io.input(file)
 
 j = joypad.get(1)
 
-while true do
+reading = true
+
+while reading do
     inputs = io.read()
     if (inputs ~= nil) then
         -- print(inputs)
@@ -18,8 +20,10 @@ while true do
             print(i)
             j[i] = true
         end
-    end
 
-    joypad.set(1,j)
-    emu.frameadvance()
+        joypad.set(1,j)
+        emu.frameadvance()
+    else
+        reading = false
+    end    
 end

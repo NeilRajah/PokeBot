@@ -148,4 +148,35 @@ function controls.delay(num)
     end --loop
 end --delay
 
+--[[
+    Play input from a file
+]]
+function controls.playSequence()
+    local file = io.open("return.sqnc", "r")
+    io.input(file)
+    
+    local reading = true
+    
+    while reading do
+        inputs = io.read() --read from the file
+        if (inputs ~= nil) then
+            -- print(inputs)
+        
+            for key, value in pairs(j) do
+                j[key] = false
+            end --loop
+    
+            for i in string.gmatch(inputs, "%S+") do
+                print(i)
+                j[i] = true
+            end
+    
+            joypad.set(1,j)
+            emu.frameadvance()
+        else
+            reading = false
+        end --if   
+    end --loop
+end --
+
 return controls --return statement for module

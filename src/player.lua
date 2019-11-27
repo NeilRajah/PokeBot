@@ -12,6 +12,7 @@ local topRight = {187,59}
 local botLeft = {59,122}
 local botRight = {187,122}
 local mid = {44,82}
+local bot = {128,178}
 
 --b value for color of full, low and empty PPs
 local full = 57
@@ -55,11 +56,16 @@ function player.battleSequence()
             print("BL")
 
         else --run away, switch, etc.
-            print("bruh")
-            -- gui.text(160, 10, "wtf")
+            controls.stylusTouch(bot[1], bot[2], 10)
+            controls.delay(30)
+            controls.stylusTouch(bot[1], bot[2], 10)
+            controls.delay(360) --wait to return to overworld
+
+            controls.playSequence()
         end
     
-    elseif ((select(3, gui.getpixel(mid[1], mid[2]))) == 214) then --not fight button
+        --if ((select(3, gui.getpixel(mid[1], mid[2]))) == 214) then
+    else --not fight button
         --mash A to scroll through text faster
         controls.mash('a', 5, 5)
     end
@@ -84,7 +90,7 @@ function player.checkHealth()
         end
     end
 
-    if health < 10 and health > 0 then
+    if health < 16 and health > 0 then
         needToHeal = 1
     elseif health == 0 then
         needToHeal = -1

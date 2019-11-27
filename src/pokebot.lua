@@ -85,18 +85,14 @@ while bot do
         elseif player.checkHealth() == 1 then 
             -- player.healFromBag()
             if frames > 150 then
-                player.flyToCenter()
-                player.returnToTrainingSpot()
-                frames = 0
-            end
+                controls.playFromFile()
+            end --frames
         elseif player.checkHealth() == -1 then
             if frames > 150 then
-                player.flyToCenter()
-                player.returnToTrainingSpot()
-                frames = 0
-            end
-        end
-    end
+                controls.playFromFile()
+            end --frames
+        end --if
+    end --battlingzz
     
     emu.frameadvance()
 end
