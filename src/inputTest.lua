@@ -36,7 +36,7 @@ while recording do
     if (allFalse) then
         str = "---"
     end
-    print(str)
+    -- print(str)
     
     if joypad.get(1).select == true then
         print("select is true")

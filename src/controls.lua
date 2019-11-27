@@ -58,8 +58,28 @@ function controls.stylusTouch(x,y, frames)
     for i = 0, frames, 1 do
         stylus.set(s)
         emu.frameadvance()
-    end
+    end --loop
 end --stylusTouch
+
+--[[
+    Tap the bottom touch screen at a point
+    loc - (x,y) coordinates of point to touch
+]]
+function controls.tapScreen(loc)
+    s.x = loc[1]
+    s.y = loc[2]
+    s.touch = true
+
+    print("tapScreen", loc[1], loc[2])
+    --loop holding down the stylus
+    for i = 0, 10, 1 do
+        stylus.set(s)
+        emu.frameadvance()
+    end --loop
+
+    controls.delay(10)
+end --tapScreen
+
 
 --potentially add drag, polyline move stylus?
 
@@ -160,14 +180,12 @@ function controls.playSequence()
     while reading do
         inputs = io.read() --read from the file
         if (inputs ~= nil) then
-            -- print(inputs)
         
             for key, value in pairs(j) do
                 j[key] = false
-            end --loop
+            end --loop-
     
             for i in string.gmatch(inputs, "%S+") do
-                print(i)
                 j[i] = true
             end
     
@@ -177,6 +195,21 @@ function controls.playSequence()
             reading = false
         end --if   
     end --loop
-end --
+end --playSequence
+
+--[[
+    Check to see if a pixel on the bottom screen is a certain color
+    location - (x,y) coordinate of the pixel to check
+    clr - (r,g,b) color to compare to
+]]
+function comparePixel(location, clr) 
+    -- print("comparePixel", location)
+    local r,g,b = gui.getpixel(location[1], location[2]) --get RGB value of pixel 
+
+    if r == clr[1] and g == clr[2] and b == clr[3] then
+        return true
+    end
+    return false
+end
 
 return controls --return statement for module

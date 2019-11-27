@@ -10,7 +10,7 @@ local counter = 0
 local battling = false
 local bot = true
 
-local x,y = 33,68
+local x,y = 187,122
 
 --GUI functions
 function main()
@@ -30,13 +30,13 @@ function main()
 
     --0x021C5CCE - xpos
     --0x021C5CEE - ypos
-    gui.text(20,140, string.format(memory.readwordunsigned(0x021C5CCE) .. " " .. string.format(memory.readwordunsigned(0x021C5CEE))))
+    -- gui.text(20,140, string.format(memory.readwordunsigned(0x021C5CCE) .. " " .. string.format(memory.readwordunsigned(0x021C5CEE))))
 
-    r,g,b = gui.getpixel(x, y)
+    local r,g,b = gui.getpixel(x, y)
     gui.text(180, 15, r .." ".. g .." ".. b)
-    -- gui.pixel(x-1,y, 'red')
 
-    gui.drawbox(200,0, 210,10, {r,g,b, 0xFF})
+    gui.drawbox(190,0, 200,10, {r,g,b, 0xFF})
+    gui.text(202,2, "(" .. x .. "," .. y .. ")")
     -- print((select(1,gui.getpixel(x,y))))
 
     --health indicator
@@ -78,21 +78,21 @@ while bot do
         player.battleSequence() 
 
     else --looking for battle
-        -- controls.delay(100)
         if player.checkHealth() == 0 then
             player.scramble(steps) --run around
             -- player.returnToTrainingSpot()
         elseif player.checkHealth() == 1 then 
             -- player.healFromBag()
             if frames > 150 then
-                controls.playFromFile()
+                controls.playSequence()
             end --frames
         elseif player.checkHealth() == -1 then
             if frames > 150 then
-                controls.playFromFile()
+                controls.playSequence()
             end --frames
         end --if
-    end --battlingzz
+        -- player.scramble(steps)
+    end --battling
     
     emu.frameadvance()
 end

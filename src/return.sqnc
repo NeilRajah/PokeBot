@@ -2,9 +2,9 @@ start
 start 
 start 
 start 
----
----
----
+start 
+start 
+start 
 ---
 ---
 ---
@@ -36,7 +36,27 @@ A
 A 
 A 
 A 
-A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
 ---
 ---
 ---
@@ -119,58 +139,13 @@ right
 ---
 ---
 ---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-right 
-right 
-right 
-right 
----
----
----
----
----
----
----
----
----
----
----
 A 
 A 
 A 
 A 
 A 
 A 
----
----
----
----
----
----
----
----
----
----
----
----
----
+A 
 ---
 ---
 ---
@@ -181,15 +156,19 @@ down
 down 
 down 
 down 
+down 
+A 
+A 
+A 
+A 
+A 
 ---
 ---
 ---
-A 
-A 
-A 
-A 
-A 
-A 
+---
+---
+---
+---
 ---
 ---
 ---
@@ -264,25 +243,7 @@ left
 left 
 left 
 left 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
+left 
 ---
 ---
 A 
@@ -290,127 +251,7 @@ A
 A 
 A 
 A 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
+A 
 ---
 ---
 ---
@@ -753,1158 +594,39 @@ A
 ---
 B 
 B 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
-B up 
 B 
 B 
-A B 
-A B 
-A B 
-A B 
-A B 
-A B 
-A B 
-A B 
-A 
-A 
-A 
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
-A 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
+B 
+B 
+B 
+B 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+right 
 ---
 ---
 ---
@@ -1982,6 +704,1373 @@ A
 B 
 B 
 B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+B up 
+up 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+A 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+B 
+B 
+B right down 
+B right down 
+B right down 
+B right down 
+B right down 
+B right down 
+B right down 
+B right down 
+B right down 
 B down 
 B down 
 B down 
@@ -2061,40 +2150,423 @@ B down
 B down 
 B down 
 B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
-B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+down 
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+B 
+B 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B left 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B right 
+B right 
+B right 
+B right 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
 B down 
 B down 
 B down 
@@ -2176,835 +2648,640 @@ B down
 B down 
 B down 
 B 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-Y 
-Y 
-Y 
-Y 
-Y 
-Y 
-Y 
----
----
----
----
----
----
----
----
----
----
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right down 
+B 
+B 
+B 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B down 
+B down 
+B down 
+B down 
+B down 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B 
+B 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B right 
+B 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
+B down 
 down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-right 
-right 
-right 
-right 
-right 
-right 
-right 
-right 
----
----
----
----
----
----
----
----
----
----
----
----
----
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
----
----
----
----
----
-down 
-down 
-down 
-down 
-down 
-down 
-down 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-Y 
-Y 
-Y 
-Y 
-Y 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
-down 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
 ---
 ---
 ---

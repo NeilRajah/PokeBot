@@ -12,12 +12,17 @@ local topRight = {187,59}
 local botLeft = {59,122}
 local botRight = {187,122}
 local mid = {44,82}
-local bot = {128,178}
+local bottom = {128,178}
+local switch = {110,78}
+local back = {244,177}
 
 --b value for color of full, low and empty PPs
-local full = 57
-local low = 140
-local empty = 148
+local battleRed = {239,57,57}
+local fleeBlue = {41,148,206}
+local fullClr = {57,66,57}
+local lowClr = {140,107,16}
+local emptyClr = {148,0,33}
+local switchClr = {57,156,82}
 
 --[[
     Repeatedly move left and right 
@@ -32,50 +37,58 @@ end --scramble
     The main flow for when the trainer is in a battle
 ]]
 function player.battleSequence()
-    if ((select(3, gui.getpixel(mid[1], mid[2]))) == 57) then --is the fight button
+    if comparePixel(mid, battleRed) and not comparePixel(botRight,fleeBlue) then --is the fight button
         --wait, press the fight button, wait
         controls.delay(30)
         controls.stylusTouch(mid[1], mid[2], 10)
         controls.delay(30)
 
-        --decide which move based on pp
-        if ((select(1, gui.getpixel(topLeft[1], topLeft[2]))) ~= empty) then --top left slot
-            controls.stylusTouch(topLeft[1], topLeft[2], 10)
+        --decide which move based on PP
+        if not comparePixel(topLeft, emptyClr) then --top left slot
+            controls.tapScreen(topLeft)
             print("TL")
 
-        elseif ((select(1, gui.getpixel(topRight[1], topRight[2]))) ~= empty) then --top right slot
-            controls.stylusTouch(topRight[1], topRight[2], 10)
+        elseif not comparePixel(topRight, emptyClr) then --top right slot
+            controls.tapScreen(topRight)
             print("TR")
 
-        elseif ((select(1, gui.getpixel(botRight[1], botRight[2]))) ~= empty) then --bottom right slot
-            controls.stylusTouch(botRight[1], botRight[2], 10)
+        elseif not comparePixel(botLeft, emptyClr) then --bottom left slot
+            controls.tapScreen(botLeft)
             print("BR")
 
-        elseif ((select(1, gui.getpixel(botLeft[1], botLeft[2]))) ~= empty) then --bottom left slot
-            controls.stylusTouch(botLeft[1], botLeft[2], 10)
+        elseif not comparePixel(botRight, emptyClr) then --bottom right slot
+            controls.tapScreen(botRight)
             print("BL")
-
-        else --run away, switch, etc.
-            controls.stylusTouch(bot[1], bot[2], 10)
-            controls.delay(30)
-            controls.stylusTouch(bot[1], bot[2], 10)
-            controls.delay(360) --wait to return to overworld
-
-            controls.playSequence()
-        end
+        end --if
     
-        --if ((select(3, gui.getpixel(mid[1], mid[2]))) == 214) then
     else --not fight button
-        --mash A to scroll through text faster
-        controls.mash('a', 5, 5)
-    end
+        --need to either flee or not learn new move
+        if comparePixel(mid, battleRed) and comparePixel(botRight, fleeBlue) then 
+            controls.tapScreen(botRight)
+            controls.delay(30)
+            controls.tapScreen(botRight)
+            controls.delay(100)
+            controls.tapScreen(mid)
+
+        else --regular battle
+            controls.mash('a', 5,5) --mash A to scroll through text faster
+        end --comparePixel
+
+    end --fightButton
 end --battleSequence
 
---fight button color: 239 57 57
---Poketch gray: 49 49 49
---no PP: 148 0 33
---low PP: 140 107 16 
---regular PP: 57 66 57
+--[[
+    When leading Pokemon has fainted, switch to the next Pokemon and run
+]]
+function player.switchAndRun()
+    controls.tapScreen(back) --exit to Choose a Pokemon screen
+    controls.tapScreen(botRight) --last Pokemon slot
+    controls.tapScreen(mid) --middle of screen
+    controls.delay(250) --wait for Pokemon to come out
+
+    controls.tapScreen(bottom) --flee
+    controls.delay(360) --return to overworld
+end --switchAndRun
 
 --Poketch health color: 82,132,82
 --Poketch no health color: 115,181,115
@@ -83,10 +96,10 @@ function player.checkHealth()
     local needToHeal = 0
     local health = 0
 
-    for x = 33, 95, 1 do
+    for x = 33, 95, 1 do --check all pixels in the Poketch line
         local r,g,b = gui.getpixel(x, 68)
         if r == 82 and g == 132 and b == 82 then
-            health = health + 1
+            health = health + 1 --increase health points if they match
         end
     end
 
