@@ -6,38 +6,23 @@
 local player = require "player"
 local controls = require "controls"
 
-local counter = 0
-local battling = false
-local bot = true
+local battling = false --whether the bot is in a battle or not
+local bot = true --whether the bot should run
 
 local x,y = 187,122
 
 --GUI functions
 function main()
-    --red text box
     gui.text(2,10, "POKEBOT")
-    
-    --print if in battle
-    gui.text(0, 40, memory.readwordunsigned(0x022417F4))
 
+    --print the mode the bot is in
     if battling then
         gui.text(2,20, "battling")
         battling = true
     else 
         gui.text(2,20, "searching")
         battling = false
-    end
-
-    --0x021C5CCE - xpos
-    --0x021C5CEE - ypos
-    -- gui.text(20,140, string.format(memory.readwordunsigned(0x021C5CCE) .. " " .. string.format(memory.readwordunsigned(0x021C5CEE))))
-
-    local r,g,b = gui.getpixel(x, y)
-    gui.text(180, 15, r .." ".. g .." ".. b)
-
-    gui.drawbox(190,0, 200,10, {r,g,b, 0xFF})
-    gui.text(202,2, "(" .. x .. "," .. y .. ")")
-    -- print((select(1,gui.getpixel(x,y))))
+    end --if
 
     --health indicator
     if battling == false then
@@ -49,56 +34,47 @@ function main()
             gui.text(5, 180, "Need to Revive")
         else
             gui.text(5,180, "Fine to Battle")
-        end
-    end    
-end
+        end --if
+    end --if
+end --main
 
 gui.register(main) --register for graphics, input uses frameadvance51
 
 --PLAYER MOVEMENT--
 
-steps = 3
-controls.delay(40)
+local steps = 3 --take 3 steps when scrambling
+local frames = 0 --summed to delay actions
 
-local frames = 0
-
+--bot is false when auxiliary features of the script should run
 while bot do 
     controls.setAllFalse()
 
-    if memory.readwordunsigned(0x022417F4) == 46584 then --if battling
+    --check the memory address for battling
+    if memory.readwordunsigned(0x022417F4) == 46584 then
         battling = true
-        -- print("battling switched to:", battling)
     else
         battling = false
         frames = frames + 1
-    end
+    end --if
 
     if battling then
         frames = 0
-        player.battleSequence() 
+        player.battleSequence() --battle sequence
 
     else --looking for battle
         if player.checkHealth() == 0 then
             player.scramble(steps) --run around
-            -- player.returnToTrainingSpot()
         elseif player.checkHealth() == 1 then 
-            -- player.healFromBag()
             if frames > 150 then
-                controls.playSequence()
+                controls.playSequence() --play file with healing and return sequence
             end --frames
         elseif player.checkHealth() == -1 then
             if frames > 150 then
-                controls.playSequence()
+                controls.playSequence() --play file with healing and return sequence
             end --frames
         end --if
         -- player.scramble(steps)
     end --battling
     
     emu.frameadvance()
-end
-
-controls.delay(40)
-
---if facing in same direction, 5 frames
---if facing perpendicular, 8 frames
---if facing opposite, 7 frames
+end --loop

@@ -1,19 +1,20 @@
---control
+--controls
 --Author: Neil Balaskandarajah
 --Created on: 11/11/2019
 --A module holding all functions regarding setting controller input
 
 local controls = {} --module
 local j = {} --button input table
-local s = stylus.get(0)
+local s = stylus.get(0) --stylus
 
 --[[
     Press down a button
-    button - button to press down 
+    val - button to press down 
 ]]--
 function setButton(val) 
     j = joypad.get(1)
     controls.setAllFalse() -- have to set all buttons to false first to prevent overlap
+    --set a button based on the letter passed
     if val == 'd' then 
         j.down = true
     elseif val == 'r' then
@@ -80,9 +81,6 @@ function controls.tapScreen(loc)
     controls.delay(10)
 end --tapScreen
 
-
---potentially add drag, polyline move stylus?
-
 --[[
     Move the player a number of tiles
     val - button to hold down
@@ -122,7 +120,7 @@ end --pressButton
 function controls.tapButton(val)
     setButton(val)
 
-    --hold input for 10 frames
+    --hold button for 10 frames
     for i = 1, 10, 1 do
         joypad.set(1,j)
         emu.frameadvance()
@@ -172,27 +170,29 @@ end --delay
     Play input from a file
 ]]
 function controls.playSequence()
-    local file = io.open("return.sqnc", "r")
-    io.input(file)
+    local file = io.open("return.sqnc", "r") --open the file to read from
+    io.input(file) --set the file to the input
     
-    local reading = true
+    local reading = true --start reading
     
     while reading do
         inputs = io.read() --read from the file
-        if (inputs ~= nil) then
+        if (inputs ~= nil) then --if there is a string
         
-            for key, value in pairs(j) do
+            --set buttons false
+            for key, value in pairs(j) do 
                 j[key] = false
-            end --loop-
+            end --loop
     
+            --set the buttons from the file to be true
             for i in string.gmatch(inputs, "%S+") do
                 j[i] = true
-            end
+            end --loop
     
             joypad.set(1,j)
             emu.frameadvance()
         else
-            reading = false
+            reading = false --stop the loop
         end --if   
     end --loop
 end --playSequence
@@ -203,13 +203,14 @@ end --playSequence
     clr - (r,g,b) color to compare to
 ]]
 function comparePixel(location, clr) 
-    -- print("comparePixel", location)
-    local r,g,b = gui.getpixel(location[1], location[2]) --get RGB value of pixel 
+    --get RGB value of pixel 
+    local r,g,b = gui.getpixel(location[1], location[2])
 
     if r == clr[1] and g == clr[2] and b == clr[3] then
         return true
-    end
-    return false
-end
+    end --if
 
-return controls --return statement for module
+    return false
+end --comparePixel
+
+return controls 

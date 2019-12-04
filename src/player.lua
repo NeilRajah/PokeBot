@@ -6,26 +6,28 @@
 local controls = require "controls"
 local player = {}
 
---coordinates for move slots 
-local topLeft = {59,59}
-local topRight = {187,59}
-local botLeft = {59,122}
-local botRight = {187,122}
-local mid = {44,82}
-local bottom = {128,178}
-local switch = {110,78}
-local back = {244,177}
+--Coordinates for move slots 
+local topLeft = {59,59} --top left move
+local topRight = {187,59} --top right move
+local botLeft = {59,122} --bottom left move
+local botRight = {187,122} --bottom right move
+local mid = {44,82} --used for fight button
+local bottom = {128,178} --bottom run button
+local switch = {110,78} --bottom switch button
+local back = {244,177} --back arrow
 
---b value for color of full, low and empty PPs
-local battleRed = {239,57,57}
-local fleeBlue = {41,148,206}
-local fullClr = {57,66,57}
-local lowClr = {140,107,16}
-local emptyClr = {148,0,33}
-local switchClr = {57,156,82}
+--RGB color values
+local battleRed = {239,57,57} --fight button red
+local fleeBlue = {41,148,206} --flee button blue
+local fullClr = {57,66,57} --full PP color move
+local lowClr = {140,107,16} --low PP color move
+local emptyClr = {148,0,33} --no PP color move
+local switchClr = {57,156,82} --switch button green
+local poketchHealthClr = {82,132,82} --Poketch health color
+local poketchNoHealthClr = {115,181,115} --Poketch background color
 
 --[[
-    Repeatedly move left and right 
+    Move left and right
     steps - number of tiles to move
 ]]--
 function player.scramble(steps) 
@@ -37,7 +39,8 @@ end --scramble
     The main flow for when the trainer is in a battle
 ]]
 function player.battleSequence()
-    if comparePixel(mid, battleRed) and not comparePixel(botRight,fleeBlue) then --is the fight button
+    --check if the fight button is in the middle and not the flee/learn a new move button
+    if comparePixel(mid, battleRed) and not comparePixel(botRight,fleeBlue) then --just fight button, regular battle
         --wait, press the fight button, wait
         controls.delay(30)
         controls.stylusTouch(mid[1], mid[2], 10)
@@ -63,7 +66,8 @@ function player.battleSequence()
     
     else --not fight button
         --need to either flee or not learn new move
-        if comparePixel(mid, battleRed) and comparePixel(botRight, fleeBlue) then 
+        if comparePixel(mid, battleRed) and comparePixel(botRight, fleeBlue) then --flee or learn a new move
+            --exit the battle
             controls.tapScreen(botRight)
             controls.delay(30)
             controls.tapScreen(botRight)
@@ -90,94 +94,26 @@ function player.switchAndRun()
     controls.delay(360) --return to overworld
 end --switchAndRun
 
---Poketch health color: 82,132,82
---Poketch no health color: 115,181,115
+--[[
+    Check the health of the player by checking the Poketch team app
+]]
 function player.checkHealth()
-    local needToHeal = 0
-    local health = 0
+    local needToHeal = 0 --returns different int based on value
+    local health = 0 --number of pixels
 
     for x = 33, 95, 1 do --check all pixels in the Poketch line
         local r,g,b = gui.getpixel(x, 68)
-        if r == 82 and g == 132 and b == 82 then
+        if comparePixel({x,68}, poketchHealthClr) then
             health = health + 1 --increase health points if they match
-        end
-    end
+        end --if
+    end --loop
 
-    if health < 16 and health > 0 then
-        needToHeal = 1
+    if health < 16 and health > 0 then --low health, ~25% of total
+        needToHeal = 1 --1 is low health
     elseif health == 0 then
-        needToHeal = -1
+        needToHeal = -1 --(-1) is fainted (revive)
     end
     return needToHeal
 end --checkHealth
 
---[[
-    Sequence of actions to fly to the Pokemon center
-]]
-function player.flyToCenter() 
-    print("flying to center")
-    controls.tapButton('x') --open menu
-    controls.tapButton('d') --move down one menu
-    controls.tapButton('a') --select Pokemon tab   
-    controls.delay(85)
-
-    controls.tapButton('a') --select Pokemon with Fly
-    controls.delay(30)
-    controls.tapButton('d') --down one
-    controls.tapButton('a') --press Fly button
-    controls.delay(90)
-
-    controls.pressButton('l', 300) --index to left wall
-    controls.pressButton('d', 300) --index to bottom wall
-    controls.delay(30) 
-
-    controls.pressButton('u', 30) --move to Canalave City
-    controls.tapButton('a') --fly to city
-
-    controls.delay(570) --long pause for fly
-
-    controls.tapButton('x')
-    controls.tapButton('u')
-    controls.tapButton('x')
-
-    print("entering center")
-    player.healAtCenter()
-    print("outside center")
-
-    controls.delay(300) 
-
-end --flyToCenter
-
-function player.healAtCenter()
-    controls.pressButton('u', 300)
-    for i = 1, 55, 1 do
-        controls.mash('a', 5, 10)
-    end
-    controls.pressButton('d', 280)
-end
-
-function player.returnToTrainingSpot()
-    controls.tapButton('y')
-    controls.pressButton('r', 30)
-    
-    -- controls.tapButton('b')
-    controls.pressButton('d', 130)
-    controls.pressButton('r', 360)
-    controls.pressButton('d', 60)
-    controls.tapButton('y')
-end
-
---[[
-    Sequence of actions to heal from bag
-]]
-function player.healFromBag()
-    controls.tapButton('x') --open menu
-    controls.tapButton('d') 
-    controls.tapButton('d') --move down to bag
-    controls.tapButton('a') --select Bag Tab
-
-    controls.delay(60) --pause
-    controls.pressButton('u', 60) --move to top position of menu
-    controls.pressButton('u', 60) --move to top position of menu
-end
 return player
