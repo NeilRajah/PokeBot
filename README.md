@@ -17,8 +17,11 @@ Lastly, the moves the Pokemon uses must be ordered top to bottom in the moves su
    <img src="resources/MoveSummary.png" alt="" width=533 height=400>
  </p>
 
-## Graphics
-- basic overlay displaying key values
+## Overlay
+- draws text to the screen
+- indicates state
+- whether bot needs to heal or not
+- Desmume input also useful
 
 ## Decision Making
 
@@ -43,8 +46,7 @@ Below is a flowchart of the actions the bot takes.
 If only the red FIGHT button is present (the default battle menu), the bot presses that button then checks the moves of the battling Pokemon. For each move, it checks the color of a pixel in the PP spot to see whether the move has PP or not. If it is gray or yellow, the move is selected and the player mashes the A button to scroll through text faster before the next move or the end of the battle. If the pixel is red, the next move is checked. This repeats for three moves. There is no case where the fourth move does not have PP, because the Pokemon will simply Struggle. The player will keep mashing until the battle ends, the fight button appears or both the red and blue buttons appear.
 
 ## Potential Improvement
-
-- some sort of user input (ie. touch screen, press buttons, keyboard on screen?) since console input does not work
+- some sort of user input (ie. touch screen, press buttons, keyboard on screen?) since console input does not work for user to interact with
 - more flexibility with sequences (ie. separate healing sequence and return sequence, being able to record multiple sequences beforehand and changing which ones to use)
 - compatible with other games (finding more memory values/ making program memory-independent)
 
