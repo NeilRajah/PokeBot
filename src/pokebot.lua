@@ -77,6 +77,8 @@ while bot do
                 print("-1: need to heal, playing sequence")
                 controls.playSequence() --play file with healing and return sequence
             end --frames
+        else
+            checking = true
         end --if
         -- player.scramble(steps)
     end --battling
