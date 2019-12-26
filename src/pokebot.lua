@@ -63,7 +63,7 @@ while bot do
     else --looking for battle
 
         if player.checkHealth() == 0 then
-            player.scramble(steps) --run around
+            player.scramble(steps) --run around 
             checking = false
         elseif player.checkHealth() == 1 and checking then -- low health
             if frames > 200 then --slight delay for healing when coming out of battle
