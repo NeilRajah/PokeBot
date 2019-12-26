@@ -52,4 +52,4 @@ Lastly, the bot can be further improved when considering similarities between ma
 ## Demonstration
 
 A demonstration of the bot can be found below:
-https://video-to-markdown.netlify.com/
+[![Pokébot Demonstration](https://i.ibb.co/HpMF2Zp/https-i-ytimg-com-vi-k-HAlb5-Stq-Jo-hqdefault.jpg)](https://youtu.be/kHAlb5StqJo "Pokébot Demonstration")
