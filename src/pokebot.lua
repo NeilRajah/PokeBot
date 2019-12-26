@@ -8,8 +8,7 @@ local controls = require "controls"
 
 local battling = false --whether the bot is in a battle or not
 local bot = true --whether the bot should run
-
-local x,y = 187,122
+local checking = true --whether the bot needs to check the health of the leading Pokemon
 
 --GUI functions
 function main()
@@ -54,7 +53,7 @@ while bot do
         battling = true
     else
         battling = false
-        frames = frames + 1
+        frames = frames + 1 --keep track of number of frames passed since battle has ended
     end --if
 
     if battling then
@@ -62,14 +61,20 @@ while bot do
         player.battleSequence() --battle sequence
 
     else --looking for battle
+
         if player.checkHealth() == 0 then
             player.scramble(steps) --run around
-        elseif player.checkHealth() == 1 then 
-            if frames > 150 then
+            checking = false
+        elseif player.checkHealth() == 1 and checking then -- low health
+            if frames > 200 then --slight delay for healing when coming out of battle
+                checking = false
+                print("1: need to heal, playing sequence")
                 controls.playSequence() --play file with healing and return sequence
             end --frames
-        elseif player.checkHealth() == -1 then
-            if frames > 150 then
+        elseif player.checkHealth() == -1 and checking then --fainted
+            if frames > 200 then
+                checking = false
+                print("-1: need to heal, playing sequence")
                 controls.playSequence() --play file with healing and return sequence
             end --frames
         end --if

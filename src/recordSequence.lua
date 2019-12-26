@@ -7,6 +7,7 @@ file = io.open("return.sqnc", "w") --open a file in write mode
 io.input(file) --set the file to be the input
 
 print("Recording will start when input starts")
+print("Press the select button to end recording")
 recording = false
 
 --Start recording input when the user presses a button to beigin
